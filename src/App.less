@@ -1,0 +1,47 @@
+@import '~antd/dist/antd.less';
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.white-shadowed {
+  background-color: #fefcff !important;
+  box-shadow: 0px 0px 8px rgba(208, 216, 243, 0.6);
+  border-color: #c0afd9;
+  border-radius: 5px;
+}
+
+.ant-layout {
+  background-color: @body-background;
+}
+
+.app-body {
+  margin-top: 20px;
+}
+
+.ant-menu-inline {
+  border-right: none;
+  background-color: #fefcff;
+}
+
+.ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+  width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  .ant-layout-sider {
+    position: fixed;
+    padding: 5px 0px 5px 0;
+  }
+}
+
+.ant-layout-sider {
+  padding: 5px 0px 5px 0;
+  margin: 0px 10px 0px 5px;
+}
+
+.ant-layout-sider-dark {
+  background-color: #00000000;
+}
