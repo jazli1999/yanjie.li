@@ -1,15 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ApolloProvider } from '@apollo/react-hooks';
+
+import client from './utils/apolloClient';
+
+import './index.css';
 
 const root = document.getElementById('root');
 
 ReactDOM.createRoot(root)
-        .render(<React.StrictMode>
-                  <App />
-                </React.StrictMode>);
+  .render(
+    <Router>
+      <ApolloProvider client={client}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </ApolloProvider>
+    </Router>
+  );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

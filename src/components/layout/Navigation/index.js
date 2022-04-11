@@ -1,5 +1,8 @@
 import { Menu } from 'antd';
 import { Layout } from 'antd';
+import { Link } from 'react-router-dom';
+import Query from '../../Query';
+import CATEGORIES_QUERY from '../../queries/category/categories';
 
 function Navigation() {
     const { Sider } = Layout;
@@ -17,12 +20,25 @@ function Navigation() {
 
     return (
         <Sider className="white-shadowed" breakpoint="sm" collapsedWidth="0"
-                zeroWidthTriggerStyle={zeroWidthTrigger}>
-            <Menu mode="inline" style={{margin: "10"}}>
-                <Menu.Item key="1"> Still </Menu.Item>
-                <Menu.Item key="2"> Under </Menu.Item>
-                <Menu.Item key="3"> Construction </Menu.Item>
-            </Menu>
+            zeroWidthTriggerStyle={zeroWidthTrigger}>
+            <Query query={CATEGORIES_QUERY} id={null}>
+                {({ data: { categories } }) => {
+                    return (
+                        <Menu mode="inline" style={{ margin: "10" }}>
+                            {categories.data.map((category) => {
+                                return (
+                                    <Menu.Item key={category.attributes.slug}>
+                                        <Link 
+                                            to={`/category/${category.attributes.slug}`}>
+                                            {category.attributes.name}
+                                        </Link>
+                                    </Menu.Item>
+                                );
+                            })}
+                        </Menu>
+                    );
+                }}
+            </Query>
         </Sider>
     );
 }
