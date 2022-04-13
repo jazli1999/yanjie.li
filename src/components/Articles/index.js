@@ -6,10 +6,8 @@ function Articles(props) {
     return (
         <div className="flex-holder" style={{ paddingTop: 15 }}>
             { props.articles.map((article) => {
-                const imageUrl = process.env.NODE_ENV !== "development"
-                                ? article.attributes.image.data.attributes.url
-                                : process.env.REACT_APP_BACKEND_URL +
-                                  article.attributes.image.data.attributes.url;
+                const imageUrl = process.env.REACT_APP_BACKEND_URL +
+                                    article.attributes.image.data.attributes.url;
                 return (
                     <Link 
                         to={`/article/${article.attributes.slug}`} 
