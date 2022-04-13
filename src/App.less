@@ -34,16 +34,33 @@
   .ant-layout-sider {
     position: fixed;
     padding: 5px 0px 5px 0;
+    z-index: 100;
   }
 }
 
 @media only screen and (min-width: 576px) {
     .ant-layout-sider {
     padding: 5px 0px 5px 0;
+    position: sticky;
+    top: 89px;
     margin: 0px 10px 0px 5px;
+    z-index: 100;
   }
+}
+
+.ant-layout-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .ant-layout-sider-dark {
   background-color: #00000000;
+}
+
+.flex-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -webkit-justify-content: center;
 }
