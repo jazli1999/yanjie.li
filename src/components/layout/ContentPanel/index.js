@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router';
 import Home from '../../containers/Articles';
 import Article from '../../containers/Article';
+import Category from '../../containers/Category';
 
 function ContentPanel() {
     return (
@@ -8,6 +9,7 @@ function ContentPanel() {
             <Routes>
                 <Route path="/" element={<Home />} exact />
                 <Route path="/article/:slug" element={<Article />} exact />
+                <Route path="/category/:slug" element={<Category />} exact />
             </Routes>
         </div>
     )

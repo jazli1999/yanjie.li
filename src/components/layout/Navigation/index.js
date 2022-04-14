@@ -29,7 +29,8 @@ function Navigation() {
                                 return (
                                     <Menu.Item key={category.attributes.slug}>
                                         <Link 
-                                            to={`/category/${category.attributes.slug}`}>
+                                            to={`/category/${category.attributes.slug}`}
+                                            key={`/category/${category.attributes.slug}`}>
                                             {category.attributes.name}
                                         </Link>
                                     </Menu.Item>
