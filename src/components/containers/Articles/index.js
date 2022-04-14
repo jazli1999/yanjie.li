@@ -11,7 +11,6 @@ function HOME() {
                     return <Articles articles={articles.data} />;
                 }}
             </Query>
-            <p style={{ textAlign: 'center', color: '#BBBBBB', marginTop: 30}}>@Yanjie :)</p>
         </div>
     );
 }

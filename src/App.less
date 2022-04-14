@@ -13,12 +13,12 @@
   border-radius: 5px;
 }
 
-.ant-layout {
+.ant-layout, .ant-layout-footer {
   background-color: @body-background;
 }
 
 .app-body {
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .ant-menu-inline {
@@ -34,24 +34,63 @@
   .ant-layout-sider {
     position: fixed;
     padding: 5px 0px 5px 0;
-    z-index: 100;
+    z-index: 99;
+  }
+
+  .content-holder {
+    margin: 10px;
+    padding: 0px 0px 5px 0;
+  }
+
+  .banner-cover {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+  }
+
+  .article-title {
+    font-size: 20pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 10px;
   }
 }
 
 @media only screen and (min-width: 576px) {
     .ant-layout-sider {
     padding: 5px 0px 5px 0;
-    position: sticky;
-    top: 89px;
+    position: fixed;
     margin: 0px 10px 0px 5px;
-    z-index: 100;
+    z-index: 99;
+  }
+  .content-holder {
+    margin: 5px 10px 10px 222px;
+    padding: 10px;
+  }
+
+  .banner-cover {
+    width: 30%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px 5px 0px 0px;
+    position: absolute;
+    top: 85px;
+    right: 10px;
+  }
+
+  .article-title {
+    font-size: 20pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-left: 20px;
+    color: white;
   }
 }
 
 .ant-layout-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
+  width: 100%;
 }
 
 .ant-layout-sider-dark {
@@ -63,4 +102,15 @@
   flex-wrap: wrap;
   justify-content: center;
   -webkit-justify-content: center;
+}
+
+.banner {
+  position: absolute;
+  height: 200px;
+  z-index: 10;
+  top: 95px;
+}
+
+.ant-page-header-content {
+  padding-top: 3px;
 }

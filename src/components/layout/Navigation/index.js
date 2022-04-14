@@ -15,7 +15,7 @@ function Navigation() {
                     3px 0px 2px rgba(208, 216, 243, 0.2)`,
         borderColor: "#c0afd9",
         borderRadius: "0px 5px 5px 0px",
-        top: 20,
+        top: 20, 
     };
 
     return (
