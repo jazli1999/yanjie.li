@@ -41,7 +41,7 @@ function Article() {
                         <div>
                             {isBigScreen
                                 ? <div>
-                                    <div style={{overflow: 'hidden', borderRadius: '5px 5px 0px 0px', margin: '-10px'}}>
+                                    <div style={{overflow: 'hidden', borderRadius: '5px 5px 0px 0px', margin: '-5px'}}>
                                         <div style={bannerBgStyle} />
                                     </div>
                                         <div style={{ height: '200px', 

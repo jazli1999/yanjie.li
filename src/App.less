@@ -131,7 +131,6 @@
 @media only screen and (min-width: @landscape) {
   .article-card {
     width: 250px;
-    margin: auto;
   }
 }
 
@@ -149,8 +148,8 @@
 .flex-holder {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  -webkit-justify-content: center;
+  justify-content: start;
+  -webkit-justify-content: start;
   padding: 5px;
 }
 
@@ -163,4 +162,66 @@
 
 .ant-page-header-content {
   padding-top: 3px;
+}
+
+.ant-card-cover img {
+  border-radius: 5px 5px 0 0;
+}
+
+.ant-card-body {
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.ant-card-meta {
+  margin: -4px 0;
+  height: 70px;
+  line-height: 1.3;
+}
+
+
+element.style {
+  user-select: auto;
+}
+.ant-card-meta-detail > div:not(:last-child) {
+  margin-bottom: 8px;
+}
+.ant-layout, .ant-layout * {
+  box-sizing: border-box;
+}
+.ant-card-meta-title {
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+}
+
+.ant-card-meta-detail {
+  overflow: hidden;
+  height: 100%;
+}
+
+.ant-card-meta-description {
+  position: absolute;
+  bottom: 10px;
+}
+
+.card-tag {
+  background-color: #eee9f5ac;
+  border-radius: 20px;
+  padding: 0px 8px 0px 8px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 10pt;
+  color: @primary-color;
+}
+
+.category-title {
+  text-transform: uppercase;
+  font-size: 20pt;
+  font-weight: 600;
+  margin: 5px auto 0px 10px;
 }

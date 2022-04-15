@@ -20,7 +20,7 @@ function Articles(props) {
                             src={imageUrl} />}>
                             <Meta 
                                 title={article.attributes.title}
-                                description={article.attributes.category.data.attributes.name} 
+                                description={<span className="card-tag">{`#${article.attributes.category.data.attributes.name}`}</span>} 
                             />
                         </Card>
                     </Link>

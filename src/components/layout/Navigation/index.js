@@ -31,7 +31,7 @@ function Navigation() {
                                         <Link 
                                             to={`/category/${category.attributes.slug}`}
                                             key={`/category/${category.attributes.slug}`}>
-                                            {category.attributes.name}
+                                            <span style={{textTransform: 'capitalize'}}>{category.attributes.name}</span>
                                         </Link>
                                     </Menu.Item>
                                 );

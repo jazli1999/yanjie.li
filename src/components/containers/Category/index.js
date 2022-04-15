@@ -14,7 +14,7 @@ function Category() {
                     console.log(categories.data[0].attributes.articles.data);
                     return (
                         <div>
-                            <h1>{categories.data[0].attributes.name}</h1>
+                            <div className="category-title">{categories.data[0].attributes.name}</div>
                             {categories.data.length > 0 &&
                                 <Articles articles={categories.data[0].attributes.articles.data} />
                             }
