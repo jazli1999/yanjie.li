@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 import Personal from './Personal'
 
 function AboutMe() {
-    const isBigScreen = useMediaQuery({ query: '(min-width: 576px)' });
+    const isBigScreen = useMediaQuery({ query: '(min-width: 850px)' });
 
     return (
         isBigScreen ? (
