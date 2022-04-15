@@ -15,7 +15,7 @@ function Navigation() {
                     3px 0px 2px rgba(208, 216, 243, 0.2)`,
         borderColor: "#c0afd9",
         borderRadius: "0px 5px 5px 0px",
-        top: 20, 
+        top: 20,
     };
 
     return (
@@ -25,13 +25,20 @@ function Navigation() {
                 {({ data: { categories } }) => {
                     return (
                         <Menu mode="inline" style={{ margin: "10" }}>
+                            <Menu.Item key='about-me'>
+                                <Link
+                                    to='/about-me'
+                                    key='/about-me'>
+                                        <span>About Me</span>
+                                </Link>
+                            </Menu.Item>
                             {categories.data.map((category) => {
                                 return (
                                     <Menu.Item key={category.attributes.slug}>
-                                        <Link 
+                                        <Link
                                             to={`/category/${category.attributes.slug}`}
                                             key={`/category/${category.attributes.slug}`}>
-                                            <span style={{textTransform: 'capitalize'}}>{category.attributes.name}</span>
+                                            <span style={{ textTransform: 'capitalize' }}>{category.attributes.name}</span>
                                         </Link>
                                     </Menu.Item>
                                 );

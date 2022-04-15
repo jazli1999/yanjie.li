@@ -7,8 +7,8 @@ import { useMediaQuery } from 'react-responsive';
 
 import ARTICLE_QUERY from '../../queries/article/article';
 import { imageRenderer, iframeRenderer } from '../../../utils/renderers';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 
 function Article() {
