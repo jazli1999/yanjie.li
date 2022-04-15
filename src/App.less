@@ -1,5 +1,11 @@
 @import '~antd/dist/antd.less';
 
+@small-screen: 415px;
+@medium-screen: 576px;
+@large-screen: 684px;
+@x-large-screen: 840px;
+@landscape: 1040px;
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -30,7 +36,7 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: @medium-screen) {
   .ant-layout-sider {
     position: fixed;
     padding: 5px 0px 5px 0;
@@ -55,7 +61,7 @@
   }
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: @medium-screen) {
     .ant-layout-sider {
     padding: 5px 0px 5px 0;
     position: fixed;
@@ -64,7 +70,7 @@
   }
   .content-holder {
     margin: 5px 10px 10px 222px;
-    padding: 10px;
+    padding: 5px;
   }
 
   .banner-cover {
@@ -84,6 +90,49 @@
     margin-left: 20px;
     color: white;
   }
+
+}
+
+.article-card {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+@media only screen and (max-width: @small-screen) {
+  .article-card {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: @small-screen) and (max-width: @medium-screen) {
+  .article-card {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: @medium-screen) and (max-width: @large-screen) {
+  .article-card {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: @large-screen) and (max-width: @x-large-screen) {
+  .article-card {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: @x-large-screen) and (max-width: @landscape) {
+  .article-card {
+    width: 33.3%;
+  }
+}
+
+@media only screen and (min-width: @landscape) {
+  .article-card {
+    width: 250px;
+    margin: auto;
+  }
 }
 
 .ant-layout-header {
@@ -102,6 +151,7 @@
   flex-wrap: wrap;
   justify-content: center;
   -webkit-justify-content: center;
+  padding: 5px;
 }
 
 .banner {
