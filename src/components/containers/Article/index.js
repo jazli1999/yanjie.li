@@ -15,8 +15,6 @@ function Article() {
     let { slug } = useParams();
     const isBigScreen = useMediaQuery({ query: '(min-width: 576px)' });
 
-    console.log(isBigScreen);
-
     return (
         <Query query={ARTICLE_QUERY} slug={slug}>
             {({ data: { articles } }) => {
@@ -48,7 +46,8 @@ function Article() {
                                                         display: 'flex', 
                                                         alignItems: 'center',
                                                         position: 'absolute',
-                                                        top: '85px'}}>
+                                                        top: '80px',
+                                                        zIndex: 20}}>
                                             <span className="article-title">
                                                 {articles.data[0].attributes.title}
                                             </span>

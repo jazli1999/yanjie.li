@@ -29,7 +29,7 @@ function Navigation() {
                                 <Link
                                     to='/about-me'
                                     key='/about-me'>
-                                        <span>About Me</span>
+                                        <span>Home</span>
                                 </Link>
                             </Menu.Item>
                             {categories.data.map((category) => {
