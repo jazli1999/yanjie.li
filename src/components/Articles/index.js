@@ -3,6 +3,8 @@ import Meta from 'antd/lib/card/Meta';
 import { Link } from "react-router-dom";
 
 function Articles(props) {
+    console.log(props.articles);
+    props.articles.sort((a, b) => new Date(b.attributes.published_date) - new Date(a.attributes.published_date));
     return (
         <div className="flex-holder">
             { props.articles.map((article) => {
