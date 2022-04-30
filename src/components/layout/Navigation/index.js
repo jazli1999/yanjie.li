@@ -23,13 +23,14 @@ function Navigation() {
             zeroWidthTriggerStyle={zeroWidthTrigger}>
             <Query query={CATEGORIES_QUERY} id={null}>
                 {({ data: { categories } }) => {
+                    categories.data.sort((a, b) => a.attributes.order - b.attributes.order);
                     return (
                         <Menu mode="inline" style={{ margin: "10" }}>
                             <Menu.Item key='about-me'>
                                 <Link
                                     to='/about-me'
                                     key='/about-me'>
-                                        <span>Home</span>
+                                    <span>Home</span>
                                 </Link>
                             </Menu.Item>
                             {categories.data.map((category) => {

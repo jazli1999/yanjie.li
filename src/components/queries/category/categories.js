@@ -7,6 +7,7 @@ const CATEGORIES_QUERY = gql`
                 attributes {
                     slug
                     name
+                    order
                 }
             }
         }
