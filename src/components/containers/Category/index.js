@@ -12,7 +12,6 @@ function Category() {
         <div>
             <Query query={CATEGORY_ARTICLES_QUERY} slug={slug}>
                 {({ data: { categories } }) => {
-                    console.log(categories.data[0].attributes.articles.data);
                     return (
                         <div>
                             <div className="category-title">{categories.data[0].attributes.name}</div>
