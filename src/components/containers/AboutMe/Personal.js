@@ -1,4 +1,4 @@
-import { Avatar, Image, Card, Row, Col, Space } from 'antd';
+import { Avatar, Image, Card, Row, Col } from 'antd';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import { useMediaQuery } from 'react-responsive';
