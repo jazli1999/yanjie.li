@@ -3,6 +3,7 @@ import Query from '../../Query';
 import ReactMarkdown from 'react-markdown';
 import Moment from 'react-moment';
 import rehypeRaw from 'rehype-raw';
+import remarkGfm from 'remark-gfm';
 import { useMediaQuery } from 'react-responsive';
 
 import ARTICLE_QUERY from '../../queries/article/article';
@@ -83,6 +84,7 @@ function Article() {
                                             )
                                           }
                                     }}
+                                    remarkPlugins={[remarkGfm]}
                                     rehypePlugins={[rehypeRaw]} />
                                 <p>
                                     <Moment format="MMM Do YYYY">
