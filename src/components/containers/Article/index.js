@@ -36,7 +36,7 @@ function Article() {
                     };
 
                     return (
-                        <div>
+                        <div style={{ background: '#ffffff' }}>
                             {isBigScreen
                                 ? <div>
                                     <div style={{overflow: 'hidden', borderRadius: '5px 5px 0px 0px', margin: '-5px'}}>

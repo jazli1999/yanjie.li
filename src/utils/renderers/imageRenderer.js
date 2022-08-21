@@ -1,14 +1,11 @@
 function imageRenderer(attributes) {
-    const { alt, src } = attributes;
+    console.log(attributes);
     return (
-        <span style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
-            <br />
             <img
-                src={`${src}`}
-                alt={alt}
-                style={{ maxHeight: '200px'}} />
-        </span>
-        
+                style={{maxWidth: '45%', maxHeight: attributes.height ?? '300px', margin: '5px' }}
+                alt={attributes.alt}
+                {...attributes} 
+            />
     )
 }
 
