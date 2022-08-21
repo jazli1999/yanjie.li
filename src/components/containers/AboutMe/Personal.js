@@ -13,8 +13,7 @@ function Personal() {
     return (
         <Query query={ABOUT_QUERY}>
             {({ data: { abouts } }) => {
-                const imageUrl = process.env.REACT_APP_BACKEND_URL
-                    + abouts.data[0].attributes.avatar.data.attributes.url;
+                const imageUrl = abouts.data[0].attributes.avatar.data.attributes.url;
                 const SIZE = 155;
 
                 const avatar = <Card style={{

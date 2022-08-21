@@ -19,8 +19,7 @@ function Article() {
         <Query query={ARTICLE_QUERY} slug={slug}>
             {({ data: { articles } }) => {
                 if (articles.data.length) {
-                    const imageUrl = process.env.REACT_APP_BACKEND_URL
-                        + articles.data[0].attributes.image.data.attributes.url;
+                    const imageUrl = articles.data[0].attributes.image.data.attributes.url;
 
                     const bannerBgStyle = {
                         background: `linear-gradient(rgba(0, 0, 0, 0.3), 

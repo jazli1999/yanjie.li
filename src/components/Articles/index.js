@@ -7,8 +7,7 @@ function Articles(props) {
     return (
         <div className="flex-holder">
             { props.articles.map((article) => {
-                const imageUrl = process.env.REACT_APP_BACKEND_URL +
-                                    article.attributes.image.data.attributes.url;
+                const imageUrl = article.attributes.image.data.attributes.url;
                 return (
                     <Link 
                         className="article-card"
