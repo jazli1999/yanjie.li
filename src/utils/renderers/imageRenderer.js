@@ -1,10 +1,14 @@
+import { Image } from 'antd';
+
 function imageRenderer(attributes) {
-    console.log(attributes);
     return (
-            <img
-                style={{maxWidth: '45%', maxHeight: attributes.height ?? '300px', margin: '5px' }}
+            <Image
                 alt={attributes.alt}
-                {...attributes} 
+                src={attributes.src}
+                width="auto"
+                height="auto"
+                style={{ margin: '5px' }}
+                {...attributes}
             />
     )
 }
