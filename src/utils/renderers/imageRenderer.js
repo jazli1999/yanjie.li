@@ -5,10 +5,7 @@ function imageRenderer(attributes) {
             <Image
                 alt={attributes.alt}
                 src={attributes.src}
-                width="auto"
-                height="auto"
-                style={{ margin: '5px' }}
-                {...attributes}
+                style={{ margin: '5px', width: 'auto', height: 'auto', maxWidth: '100%', ...attributes}}
             />
     )
 }
