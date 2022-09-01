@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Divider } from 'antd';
 import Articles from '../../Articles';
@@ -7,6 +7,11 @@ import CATEGORY_ARTICLES_QUERY from '../../queries/category/articles';
 
 function Category() {
     let { slug } = useParams();
+
+    useEffect(() => {
+        let title = slug.replaceAll('-', ' ');
+        document.title = title.charAt(0).toUpperCase() + title.slice(1);
+    });
 
     return (
         <div>

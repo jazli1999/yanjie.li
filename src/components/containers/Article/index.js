@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router';
 import Query from '../../Query';
 import ReactMarkdown from 'react-markdown';
@@ -15,6 +16,11 @@ import { oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 function Article() {
     let { slug } = useParams();
     const isBigScreen = useMediaQuery({ query: '(min-width: 576px)' });
+
+    useEffect(() => {
+        let title = slug.replaceAll('-', ' ');
+        document.title = title.charAt(0).toUpperCase() + title.slice(1);
+    });
 
     return (
         <Query query={ARTICLE_QUERY} slug={slug}>
