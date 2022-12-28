@@ -1,6 +1,6 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import MainPage from './MainPage';
-import './App.less';
+import { BrowserRouter as Router } from "react-router-dom";
+import MainPage from "./MainPage";
+import "./App.less";
 
 const App = () => {
   return (
@@ -8,6 +8,6 @@ const App = () => {
       <MainPage />
     </Router>
   );
-}
+};
 
 export default App;

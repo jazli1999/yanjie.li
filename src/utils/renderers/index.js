@@ -1,7 +1,4 @@
-import imageRenderer from './imageRenderer';
-import iframeRenderer from './iframeRenderer';
+import imageRenderer from "./imageRenderer";
+import iframeRenderer from "./iframeRenderer";
 
-export {
-    imageRenderer,
-    iframeRenderer,
-}
+export { imageRenderer, iframeRenderer };

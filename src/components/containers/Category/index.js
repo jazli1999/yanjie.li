@@ -1,37 +1,44 @@
-import React, { useEffect } from 'react';
-import { useParams } from 'react-router';
-import { Divider } from 'antd';
-import Articles from '../../Articles';
-import Query from '../../Query';
-import CATEGORY_ARTICLES_QUERY from '../../queries/category/articles';
+import React, { useEffect } from "react";
+import { useParams } from "react-router";
+import { Divider } from "antd";
+import Articles from "../../Articles";
+import Query from "../../Query";
+import CATEGORY_ARTICLES_QUERY from "../../queries/category/articles";
 
 function Category() {
-    let { slug } = useParams();
+  let { slug } = useParams();
 
-    useEffect(() => {
-        let title = slug.replaceAll('-', ' ');
-        document.title = title.charAt(0).toUpperCase() + title.slice(1);
-    });
+  useEffect(() => {
+    let title = slug.replaceAll("-", " ");
+    document.title = title.charAt(0).toUpperCase() + title.slice(1);
+  });
 
-    return (
-        <div>
-            <Query query={CATEGORY_ARTICLES_QUERY} slug={slug}>
-                {({ data: { categories } }) => {
-                    return (
-                        <div>
-                            <div className="category-title">{categories.data[0].attributes.name}</div>
-                            <Divider orientation="left" orientationMargin="0">
-                                <span className="category-description"> {categories.data[0].attributes.description} </span>
-                            </Divider>
-                            {categories.data.length > 0 &&
-                                <Articles articles={categories.data[0].attributes.articles.data} />
-                            }
-                        </div>
-                    );
-                }}
-            </Query>
-        </div>
-    );
-};
+  return (
+    <div>
+      <Query query={CATEGORY_ARTICLES_QUERY} slug={slug}>
+        {({ data: { categories } }) => {
+          return (
+            <div>
+              <div className="category-title">
+                {categories.data[0].attributes.name}
+              </div>
+              <Divider orientation="left" orientationMargin="0">
+                <span className="category-description">
+                  {" "}
+                  {categories.data[0].attributes.description}{" "}
+                </span>
+              </Divider>
+              {categories.data.length > 0 && (
+                <Articles
+                  articles={categories.data[0].attributes.articles.data}
+                />
+              )}
+            </div>
+          );
+        }}
+      </Query>
+    </div>
+  );
+}
 
 export default Category;

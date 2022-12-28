@@ -1,22 +1,22 @@
 import gql from "graphql-tag";
 
 const ABOUT_QUERY = gql`
-    query about {
-        abouts {
+  query about {
+    abouts {
+      data {
+        attributes {
+          bio
+          avatar {
             data {
-                attributes {
-                    bio
-                    avatar {
-                        data {
-                            attributes {
-                                url
-                            }
-                        }
-                    }
-                }
+              attributes {
+                url
+              }
             }
+          }
         }
+      }
     }
-`
+  }
+`;
 
 export default ABOUT_QUERY;

@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.less';
+@import "~antd/dist/antd.less";
 
 @small-screen: 415px;
 @medium-screen: 576px;
@@ -13,7 +13,8 @@
   border-radius: 5px;
 }
 
-.ant-layout, .ant-layout-footer {
+.ant-layout,
+.ant-layout-footer {
   background-color: @body-background;
 }
 
@@ -26,7 +27,8 @@
   background-color: #fefcff;
 }
 
-.ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title {
+.ant-menu-inline .ant-menu-item,
+.ant-menu-inline .ant-menu-submenu-title {
   width: 100%;
 }
 
@@ -74,7 +76,7 @@
 }
 
 @media only screen and (min-width: @medium-screen) {
-    .ant-layout-sider {
+  .ant-layout-sider {
     padding: 5px 0px 5px 0;
     position: fixed;
     margin: -2.5px 10px 0px 5px;
@@ -102,7 +104,6 @@
     margin-left: 20px;
     color: white;
   }
-
 }
 
 .article-card {
@@ -191,14 +192,14 @@
   line-height: 1.3;
 }
 
-
 element.style {
   user-select: auto;
 }
 .ant-card-meta-detail > div:not(:last-child) {
   margin-bottom: 8px;
 }
-.ant-layout, .ant-layout * {
+.ant-layout,
+.ant-layout * {
   box-sizing: border-box;
 }
 .ant-card-meta-title {
