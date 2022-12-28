@@ -1,6 +1,7 @@
 import { Menu } from "antd";
 import { Layout } from "antd";
 import { Link } from "react-router-dom";
+
 import Query from "../../Query";
 import CATEGORIES_QUERY from "../../queries/category/categories";
 
@@ -18,6 +19,13 @@ function Navigation() {
     top: 20,
   };
 
+  const autoCollapse = () => {
+    const navIcon = document.getElementsByClassName(
+      "ant-layout-sider-zero-width-trigger"
+    )[0];
+    if (navIcon !== undefined) navIcon.click();
+  };
+
   return (
     <Sider
       className="white-shadowed"
@@ -33,7 +41,7 @@ function Navigation() {
           return (
             <Menu mode="inline" style={{ margin: "10" }}>
               <Menu.Item key="about-me">
-                <Link to="/about-me" key="/about-me">
+                <Link to="/about-me" key="/about-me" onClick={autoCollapse}>
                   <span>Home</span>
                 </Link>
               </Menu.Item>
@@ -43,6 +51,7 @@ function Navigation() {
                     <Link
                       to={`/category/${category.attributes.slug}`}
                       key={`/category/${category.attributes.slug}`}
+                      onClick={autoCollapse}
                     >
                       <span style={{ textTransform: "capitalize" }}>
                         {category.attributes.name}
