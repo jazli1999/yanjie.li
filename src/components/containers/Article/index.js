@@ -1,16 +1,16 @@
 import { useEffect } from "react";
-import { useParams } from "react-router";
-import Query from "../../Query";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
 import { useMediaQuery } from "react-responsive";
-
-import ARTICLE_QUERY from "../../queries/article/article";
-import { imageRenderer, iframeRenderer } from "../../../utils/renderers";
+import { useParams } from "react-router";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
+
+import { iframeRenderer, imageRenderer } from "../../../utils/renderers";
+import Query from "../../Query";
+import ARTICLE_QUERY from "../../queries/article/article";
 
 function Article() {
   let { slug } = useParams();
@@ -19,7 +19,7 @@ function Article() {
   useEffect(() => {
     let title = slug.replaceAll("-", " ");
     document.title = title.charAt(0).toUpperCase() + title.slice(1);
-  });
+  }, [slug]);
 
   return (
     <Query query={ARTICLE_QUERY} slug={slug}>

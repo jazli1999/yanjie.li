@@ -55,6 +55,19 @@
     ]
   },
   "prettier": {
-    "tabWidth": 2
+    "tabWidth": 2,
+    "semi": true,
+    "importOrder": [
+      "^@core/(.*)$",
+      "^@server/(.*)$",
+      "^@ui/(.*)$",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "prettier": "2.8.1"
   }
 }

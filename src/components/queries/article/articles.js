@@ -16,6 +16,13 @@ const ARTICLES_QUERY = gql`
               }
             }
           }
+          tags {
+            data {
+              attributes {
+                name
+              }
+            }
+          }
           image {
             data {
               attributes {
